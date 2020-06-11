@@ -1,0 +1,34 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "Buy Milk",
+      "completed": false
+    },
+    {
+      "id": 2,
+      "title": "Buy Pad Khapraw Moo Krob & Khao Pad Gai",
+      "completed": true
+    },
+    {
+      "id": 3,
+      "title": "Clean apartment",
+      "completed": false
+    },
+    {
+      "title": "wash my dupa",
+      "completed": false,
+      "id": 6
+    },
+    {
+      "title": "buy cebulas and kartofels",
+      "completed": false,
+      "id": 7
+    },
+    {
+      "title": "buy cheapest vodka",
+      "completed": false,
+      "id": 8
+    }
+  ]
+}
