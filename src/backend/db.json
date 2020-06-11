@@ -1,11 +1,6 @@
 {
   "todos": [
     {
-      "id": 1,
-      "title": "Buy Milk",
-      "completed": false
-    },
-    {
       "id": 2,
       "title": "Buy Pad Khapraw Moo Krob & Khao Pad Gai",
       "completed": true
@@ -29,6 +24,16 @@
       "title": "buy cheapest vodka",
       "completed": false,
       "id": 8
+    },
+    {
+      "title": "",
+      "completed": false,
+      "id": 9
+    },
+    {
+      "title": null,
+      "completed": false,
+      "id": 10
     }
   ]
 }
