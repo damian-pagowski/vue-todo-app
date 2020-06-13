@@ -14,18 +14,19 @@ export default {
   data() {
     return { title: "" };
   },
-  methods : {
-    addTodo(e){
-      e.preventDefault()
+  methods: {
+    addTodo(e) {
+      e.preventDefault();
       const newTodo = {
         // id: uuidv4(),
         title: this.title,
         completed: false
-      }
+      };
       // send to parent
-      this.$emit('add-todo', newTodo)
+      this.$store.dispatch("postTodo", newTodo);
       // clear
       this.title = null;
+      this.$store.commit("increment");
     }
   }
 };

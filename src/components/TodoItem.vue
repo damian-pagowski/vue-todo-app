@@ -4,7 +4,7 @@
       <input type="checkbox" v-on:change="markComplete" v-bind:checked="todo.completed" />
       <p>{{todo.title}}</p>
     </div>
-    <button @click="$emit('del-todo', todo.id)">x</button>
+    <button @click="deleteTodo">x</button>
   </div>
 </template>
 
@@ -15,6 +15,10 @@ export default {
   methods: {
     markComplete() {
       this.todo.completed = !this.todo.completed;
+    },
+    deleteTodo() {
+      this.$store.dispatch("deleteTodo", this.todo.id);
+      this.$store.commit("decrement");
     }
   }
 };
@@ -22,18 +26,14 @@ export default {
 
 <style  scoped>
 .todo-item input {
-  /* display: block; */
   margin: auto 10px;
-  /* height: 100%; */
 }
 .todo-item button {
   background: red;
   color: white;
   border-radius: 50%;
-  /* border: 1px solid gray; */
   padding: 5px 10px;
   margin: auto 10px;
-  /* height: 100%; */
 }
 
 .todo-item div {
@@ -50,7 +50,6 @@ export default {
 .is-complete {
   text-decoration: line-through;
 }
-
 .del {
   background: red;
   color: #fff;
